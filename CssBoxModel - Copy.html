@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Css Box Model</title>
+        <style>
+            html{
+                background-color: aliceblue;
+            }
+            div{
+                /* padding: 10px 20px 30px 40px;
+                padding:top right bottom left
+                border: 20px dashed red;
+                margin:50px;
+                padding-left: 500px;
+                 margin-top: 10px; */
+
+            }
+            .square{
+                /* .= class selector  */
+                border: 20px solid red;
+                height: 100px;
+                width: 100px;
+                display: inline-block;
+            }
+            #Rectangle{           
+                /* for #=idselector */
+                width: 400px;
+                display: inline-block;
+                float: right;
+            }
+            /* desecent selecter */
+            div p {
+                color: green;
+                text-decoration: wavy underline;
+                font-style: oblique;
+                
+                
+
+            }
+            /* child selecter */
+            div > p{
+                color: red;
+                text-decoration: double underline;
+                font-style: inherit;
+                /* ajecent sibling */
+            }
+            div+p{
+                color: rgba(128, 0, 128, 0.897);
+          /* general sibling selector */
+            }
+          div ~ p{
+            color: rgb(247, 6, 86);
+            text-decoration: dotted underline;
+            font-style: italic;
+            }
+            span{
+                border: 3PX solid crimson;
+            }
+
+
+
+        </style>
+        <link rel="stylesheet" href="boxModel.css">
+       </head>   
+       <body>
+        <!-- <div> <h1>css box model</h1></div> -->
+        <div><h5>page</h5></div>
+        <div class="square"> <h2>kiran</h2></div>
+        <div class="square"id=Rectangle><h2>kishan</h2></div>
+        <div>
+            <!-- direct child -->
+            <p>lorem ipsum dolor sit amet</p>
+            <p>lorem ipsum dolar consectetur</p>
+            <span>
+               <P>lorem ipsum dolor amet consectetur adipisicing</P> 
+
+            </span>
+        </div>
+        <p>lorem ipsum dolor sit</p>
+        <p>ipsum dolar consectetur</p>
+        <!-- cricket player -->
+        
+        <span>kl rahul</span>
+        <span>kohli</span>
+        <span>rohith</span>
+        <span>dhoni</span>
+        <span>rabada</span>
+        <span>abd</span>
+        <span>duplexy</span>
+        <span>dhoni</span>
+        <span>kl </span>
+        <span>kohli</span>
+        <span>rohith</span>
+        <span>dhoni</span>
+
+
+
+       </body> 
+       </html>         
+       
+       
+        <!-- types selecter
+        element selecter
+        grouping selecter
+        class selecter
+        id selecter -->
+
+        <!-- css combinater
+        desecendant selecter
+        child selecter -->
+        
+
+       <!-- how to mange project
+    tools=jira
+epic=facebookpage
+story=register page,login page
+task=submit,estimate=time taken to complete a task 2days
+status = TODO,inprogress,complete
+ -->
+
+ <!-- inside head tag called as css
+inside of body tag called html -->
+       

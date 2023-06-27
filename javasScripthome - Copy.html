@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+    </head>
+    <body>
+        <div>Welcome <span id="userNameMessage"></span></div>
+        <!-- //button for displayDate -->
+        <div>
+            <button onclick="displayDate()">display Date</button>
+            <span id="dateMessage"></span>
+        </div>
+        <!-- <button type="button" onclick="userMessage()">username</button> if we are using script in haed then we have create
+        button and function we have to call function in script -->
+        <!-- note in case script wrote in head tag and body will down , we have create button and we have give function name and function give to button-->
+        <script>
+
+            let username = sessionStorage.getItem("username")
+            console.log(username)
+            let userNameMessage = document.getElementById("userNameMessage")
+            console.log(userNameMessage)
+            userNameMessage.innerHTML = username
+
+            <!-- //script for displayDate and year -->
+            function displayDate(){
+                let date = new Date()
+                console.log(date)
+                console.log(date.getFullYear())
+                let dateMessage = document.getElementById("dateMessage")
+                dateMessage.innerHTML = date
+            }
+
+            let a=10
+            let b=10
+            if(a==b){
+                console.log("==")        //true
+            }
+            if(a===b){
+                console.log("===")        //true
+            }
+            let c='10'               //note incase only 10 means true
+            if(a==c){
+                console.log("a==c")      //true //== only contentsa ,b ,c
+            }
+            if(a===c){
+                console.log("a===c")        //false //=== reads contents with datatype 10,10,'10'=String
+            }
+
+
+
+            // function usermessage(){
+            // let username = sessionStorage.getItem("username")
+            // console.log(username)
+            // let userNameMessage = document.getElementById("userNameMessage")
+            // console.log(userNameMessage)
+            // userNameMessage.innerHTML = username
+            // }
+
+
+        </script>
+    </body>
+</html>

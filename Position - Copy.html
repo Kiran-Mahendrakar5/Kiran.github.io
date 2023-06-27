@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position</title>
+        <style>
+            .classSelector{
+                color: brown;
+                position:fixed;
+                /* its fixed */
+                /* top:0; */
+                font-style: italic;
+                right: 0;
+                bottom: 0;
+                
+            }
+
+            .info {
+               padding: 50px;
+            }
+            div p{
+                color: red;
+            }
+            /* defoult valveod position static */
+            .position{
+                color: green;
+                position: relative;
+                /* relative not fixed */
+                left: 150px;
+               
+            }
+            .absolute{
+                color: blue;
+                position: absolute;
+                left:200px;
+                
+            }
+            .dan{
+                position: absolute;
+                top:0;
+                left:0;
+            }
+            .relative{
+                position:relative;
+               right:0;
+                left:0;
+            }
+            .baazar{
+                position:absolute;
+                left: 0;
+                top: 0;
+            }
+            .kalki{
+                position: absolute;
+                top: 0;
+                left:70px;
+
+            }
+            .kiran{
+                color: aliceblue;
+                position:absolute;
+                bottom: 0;
+                left:65px;
+            }
+            .kishan{
+                color: antiquewhite;
+                position:absolute;
+                bottom: 0;
+                left:0;
+            }
+            .danveer{
+                color: red;
+                position: absolute;
+                top:65px;
+                left:30px;
+                
+
+
+            }
+            ul{
+                /* position: fixed; */
+                list-style-type: none;
+                /* background-color: aqua; */
+                
+                
+            }
+            li{
+               
+                display: inline-block;
+                padding: 10px;
+                background-color: black;
+            }
+            li a {
+                text-decoration: none;
+                color: white;
+            }
+            /* pseudo selector */
+            li:hover{
+                background-color: blue;
+            }
+            body{
+                margin: 0;
+            }
+
+            
+            
+            
+            
+        </style>
+    </head>
+    <body>
+        <!--navigation bar-->
+       <ul>
+        <li><a href="https//facebook.com">Facebook</a></li>
+        <li><a href="https//instagram">instagram</a></li>
+        <li><a href="https//whatsapp">whatsapp</a></li>
+       </ul>
+        
+       <div class="info">
+
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolar consectetur</p>
+        <p>lorem ipsum dolor sit amet</p>
+        <p>lorem ipsum dolar consectetur</p>
+
+       </div>
+       <div class="classSelector">
+        <p>lorem ipsum dolar consectetur</p>
+       </div>
+       <div class="position">
+        making position as reletive
+       </div>
+       <div class="absolute">
+        making position as absolute ulaga is genius
+       </div>
+       <div class="relative">
+        <img src="Baazar image.jpg" width="100px">
+        <span class="baazar">dan</span>
+        <span class="kalki">kalk</span>
+        <span class="kiran">kiran</span>
+        <span class="kishan">kishan</span>
+        <span class="danveer">prapul</span>
+       </div>
+
+       
+       
+
+
+
+    </body>
+</html>

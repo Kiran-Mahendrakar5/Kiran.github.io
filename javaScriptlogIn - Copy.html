@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LogIn</title>
+        <script>
+            var a
+            console.log(a)
+             a = 10
+            console.log(a)
+            var a
+            console.log(a)
+            let b
+            console.log(b)
+            b='javascript'
+            console.log(b)
+            // let b//console.log(b)
+            const PI = 3.14
+            console.log(PI)
+            // array in javascript
+            //int a[] = new a[10]
+            let arr = []
+            arr = [1,2,3,4,5]
+            console.log(arr)
+            console.log(arr.length)
+            for(let i=1;i<arr.length;i++){
+                console.log(arr[i-1])
+            }
+            console.log("..........................................")
+            let arr1 = [1,'java',true,2,false]
+            for(let i=0;i<arr1.length;i++){
+                console.log(arr1[i])
+            }
+            let arr3 = []
+            arr3.push('javascript')//adding elements end of an array
+            console.log(arr3)
+            arr3.push('array')
+            arr3.push('dynamic') 
+            console.log(arr3) 
+            arr3.pop()     // pop last elements removing
+            console.log(arr3)
+
+            
+            arr3.unshift("unshift") // unshift add elemets at beginning of array
+            console.log(arr3)
+            arr3.unshift("adding elememts")
+            console.log(arr3)
+            arr3.shift() // shift removing elements beginning of array
+            console.log(arr3)
+
+
+            let tree = {
+                'name' : 'mango',
+                'lifespan': 10
+            }
+            console.log(tree)
+
+            let coconut = {
+                'name' : 'coconutTree',
+                'lifespan': 100
+            }
+            console.log(coconut)
+            let trees = []
+            trees.push(tree)
+            trees.unshift(coconut)
+            console.log(trees)
+            for(let i=0;i<trees.length;i++){
+                console.log(trees[i].name)
+            }
+            for(let i=0;i<trees.length;i++){
+                console.log(trees[i].lifespan)
+            }
+
+
+
+            function LogIn(){
+                console.log("calling log in function")
+                var email = document.getElementById("email")
+                console.log(email.value)
+                let password = document.getElementById("password")
+                console.log(password.value)
+               let registerDataString =  localStorage.getItem("NoKey")
+               console.log(registerDataString)
+               console.log(registerDataString.email)
+
+              let registerObject =  JSON.parse(registerDataString)
+              console.log(registerObject)
+              console.log(registerObject.email)
+              if(email.value == registerObject.email &&
+              password.value == registerObject.passward){
+                console.log("login sucess")
+                sessionStorage.setItem("username",registerObject.firstName)
+                window.location.href = 'javasScripthome.html'
+            //    window.location.href = "https://facebook.com"
+                // window.location.href = "https://instagram.com" 
+                
+              }else{
+                console.log("Invalid email or password")
+              }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <div>
+                <label>EnterEmail</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label>Enter password</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <button type="button" onclick="LogIn()">LogIn</button>
+        </form>
+        
+    </body>
+</html>
+
+<!-- interview -->
+<!-- var,let,const -->
+<!-- how navigate to another page in javascript -->
+<!-- == and=== -->

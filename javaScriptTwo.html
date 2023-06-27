@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <script>
+            function register(){
+                var firstName = document.getElementById("firstName")
+                console.log(firstName.value)
+                if(firstName.value==""){
+                    console.log("please enter first name")
+                    var firstNameMessage = document.getElementById("firstNameMessage")
+                    firstNameMessage.innerHTML = "Please Enter First name"
+                    firstNameMessage.style.color = "Green"
+                }
+                var lastName = document.getElementById("lastName")
+                console.log(lastName.value)
+                if(lastName.value==""){
+                    console.log("please enter last name")
+                    var lastNameMessage = document.getElementById("lastNameMessage")
+                    lastNameMessage.innerHTML = "Please Enter last name"
+                    lastNameMessage.style.color = "red"
+                }
+                var email = document.getElementById("email")
+                console.log(email.value)
+                if(email.value==""){
+                    console.log("please enter email")
+                    var emailMessage = document.getElementById("emailMessage")
+                    emailMessage.innerHTML = "Please Enter email"
+                    emailMessage.style.color = "red"
+                }
+                var passward = document.getElementById("passward")
+                console.log(passward.value)
+                if(passward.value==""){
+                    console.log("please enter passward")
+                }
+                if(passward.value.length<4){
+                   console.log("passward is weak")
+                   var passwardMessage = document.getElementById("passwardMessage")
+                   passwardMessage.innerHTML = "passward is weak"
+                }
+                //document.formname.filedname
+                console.log(document.registration.gender)
+                console.log(document.registration.gender[0])
+                console.log(document.registration.gender[0].checked)
+                console.log(document.registration.gender[1].checked)
+                console.log(document.registration.gender[2].checked)
+                if(document.registration.gender[0].checked==false &&
+                document.registration.gender[1].checked==false &&
+                document.registration.gender[2].checked==false){
+                    console.log("please select Gender")
+                    var selectgender = document.getElementById("selectGender")
+                    selectgender.innerHTML = "please select gender"
+                    selectgender.style.color = "red"
+                }
+                console.log(document.registration.city.value)
+                var select = document.getElementById("selectCity")
+                select.innerHTML = ''
+            if(document.registration.city.value == "0"){
+                console.log("please select the city")
+
+                select.innerHTML = "please select the city"
+                select.style.color = "red"
+            }
+            console.log(firstName.value)
+            console.log(lastName.value)
+            console.log(passward.value)
+            //console.log for gender
+            var genderData
+            if(document.registration.gender[0].checked ==true){
+                genderData = document.registration.gender[0].value
+            }else if(document.registration.gender[1].checked ==true){
+                genderData = document.registration.gender[1].value
+            }else if(document.registration.gender[2].checked ==true){
+                genderData = document.registration.gender[2].value
+            }
+            console.log(genderData)
+            console.log(document.registration.city.value)
+
+                localStorage.setItem("javascript","RegisterformData")
+                //create object
+                var registerData = {
+                    "firstName" : firstName.value,  
+                    "email" : email.value,
+                    "passward":passward.value,
+                    "gender":genderData,
+                    "city":document.registration.city.value
+                }
+                console.log(registerData)
+                console.log(typeof(registerData))
+                //to convert object String
+                var registerDataString = JSON.stringify(registerData)
+                console.log(typeof(registerDataString))
+                console.log(registerDataString)
+                localStorage.setItem("NoKey",registerDataString)
+                               
+
+                
+
+            }
+
+
+        </script>
+        </head>
+        <body>
+            <form name="registration">
+                <div>
+                    <label>Enter First Name</label>
+                    <input type="text" name="firstName" id="firstName">
+                    <span id="firstNameMessage"></span>
+
+                </div>
+                <div>
+                    <label>Enter last Name</label>
+                    <input type="text" name="lastName" id="lastName">
+                    <span id="lastNameMessage"></span>
+
+                </div>
+                <div>
+                    <label>Enter EmailId</label>
+                    <input type="email" name="email" id="email">
+                    <span id="emailMessage"></span>
+                </div>
+                <div>
+                    <label>Enter passward</label>
+                    <input type="passward" name="passward" id="passward">
+                    <span id="passwardMessage"></span>
+                </div>
+                <div>
+                    <label>Select gender</label>
+                    <input type="radio" name="gender">male
+                    <input type="radio" name="gender">female
+                    <input type="radio" name="gender">other
+                    <span id="selectGender"></span>
+                </div>
+                <div>
+                    <label>select city</label>
+                    <select name="city">
+                        <option value="0">---select city---</option>
+                        <option>Bangalore</option>
+                        <option>Tumkur</option>
+                        <option>Hassan</option>
+                    </select>
+                    <span id="selectCity"></span>
+                </div>
+                
+
+                <p>&#128525;&#128525;&#128525;</p>
+                   
+                <button type="button" onclick="register()">Register</button>
+            </form>
+
+            <div>
+                Already register , click to <a href="LogIn.html"logIn></a>
+            </div>
+
+        </body>
+        </html>

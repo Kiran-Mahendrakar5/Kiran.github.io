@@ -1,0 +1,231 @@
+<!--javaScript 
+dynamic website creation 
+how to make dynamic-->
+
+<!--for validation 
+click,tap,double click,
+............................
+perform action 
+handle action 
+Event handle-Event handling-->
+<!--<head></Head>-->
+<!--<script></script>-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javaScript</title>
+        <script>
+            //console.log()
+            //System.out.println()<!--System=class,out=variable,println=method-->
+            console.log("we learing javaScript")
+
+            // how to varibale in java script
+            //datatype variable name
+            //var variable name
+
+
+            //datatypes in javaScript
+            //number ,String ,boolean,undefined
+
+            var javaScript = 'java';
+            console.log(javaScript)
+            
+            javaScript = 'javaScript';
+            console.log(javaScript)
+            console.log(typeof(javaScript))  //type of indicates perticular datatype like String 
+
+            console.log(typeof(10))    //type of indicates perticular datatype like Number 
+
+            var a=10;
+            console.log(a)
+
+            var b='kiran';
+            console.log(b)
+
+            k=10;
+            console.log(typeof(k))
+
+            m='kishan';
+            console.log(typeof(m))
+
+
+            var c = true;
+            console.log(c)
+            console.log(typeof(c))
+
+            var d=10.01;
+            console.log(d)
+            console.log(typeof(d))
+
+
+            var e;
+            console.log(e)
+            console.log(typeof(e))
+
+
+            //datatypes in javaScript
+            //number ,String ,boolean,undefined
+
+             //..................................................
+
+        //  how to declear function
+        // argument function
+        // how call function
+        // events
+        // event handling
+        // how send data from html to javascipt
+        //  how send data from javascipt to html
+        // form validation
+        // register data,log in page ,home page
+        // storage data in browser
+
+
+
+        // ................................................
+        // to declare function in javascipt
+        function display(){
+            console.log("calling display function")
+        }
+        display()
+ // ....................how to add ............................
+        function add(x,y){
+            console.log("calling parameterise function")
+            console.log(x)
+            console.log(y)
+            return x+y
+        }
+       
+        add(10,20)
+        console.log(add(10,20))
+
+   // ....................how to substaction............................
+        function sub(x,y){
+            console.log("calling parameterise function")
+            console.log(x)
+            console.log(y)
+            return x-y
+        }
+     
+        sub(10,20)
+        console.log(sub(10,20))
+// ....................how to multiplication ............................
+        function multi(x,y){
+            console.log("calling parameterise function")
+            console.log(x)
+            console.log(y)
+            return x*y
+        }
+        
+        multi(10,20)
+        console.log(multi(10,20))
+
+
+        // ....................how to division............................
+        function div(x,y){
+            console.log("calling parameterise function")
+            console.log(x)
+            console.log(y)
+            return x/y
+        }
+        
+       div(10,20)
+        console.log(div(10,20))
+
+// button resposing successfully
+        function clickMe(){
+            console.log("button resposing successfully")
+        }
+        function Addme(){
+            console.log("a+b+c+d")
+        }
+        function remove(){
+            console.log("a-b-c-d")
+        }
+        function mouseOver(){
+            console.log("user mouseover a button")
+        }
+        function mouseLeave(){
+            console.log("mouse leaving")
+        }
+
+
+        function addition(){
+
+            // form value
+        var num1 = document.getElementById("num1")
+        console.log(num1)
+        console.log(num1.value)
+
+        var num2 = document.getElementById("num2")
+        console.log(num2)
+        console.log(num2.value)
+        
+        var result = parseInt(num1.value)+parseInt(num2.value)
+        console.log(result)
+    
+        }
+        
+           
+
+        
+        function substraction(){
+           
+
+            var num1 = document.getElementById("num1")
+        console.log(num1)
+        console.log(num1.value)
+
+        var num2 = document.getElementById("num2")
+        console.log(num2)
+        console.log(num2.value)
+             //console.log (num1-num2.value)
+        var subs = parseInt(num1.value)-parseInt(num2.value)
+        console.log(subs)
+
+        }
+        function multi(){
+
+            var num1 = document.getElementById("num1")
+        console.log(num1)
+        console.log(num1.value)
+
+        var num2 = document.getElementById("num2")
+        console.log(num2)
+        console.log(num2.value)
+            //console.log (num1*num2.value)
+        var multi = parseInt(num1.value)*parseInt(num2.value)
+        console.log(multi)
+
+        }
+
+  
+      
+        </script>
+    </head>
+    <body>
+        <button onclick="clickMe()">click me</button>
+        <button onclick="Addme()">Add</button>
+        <button onclick="remove()">remove</button>
+        <!-- mouse over -->
+        <button onmouseover="mouseOver()" onclick="clickMe()">mouse over</button>
+        <!-- mouseLeave -->
+        <button onmouseleave="mouseLeave()">mouse leave</button>
+
+        <form>
+        <div>
+            <label>Enter Number1</label>
+            <input type="text" Name="num1" id="num1">
+        </div>
+        <div>
+            <label>Enter Number2</label>
+            <input type="text" Name="num2" id="num2">
+        </div>
+        <button type="button" onclick="addition()">Addition</button>
+        <button type="button" onclick="substraction()">substaction</button>
+        <button type="button" onclick="multi()">multiplication</button>
+    </form>
+
+
+
+    </body>
+</html> 
